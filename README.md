@@ -1,6 +1,6 @@
 # 🛠️ Portfolio - Software Testing  
 
-Welcome to my **Software Testing Portfolio**, where I showcase my expertise in automated testing using different frameworks like **Cypress, Selenium, Playwright, and API testing with Jest**. This project contains test suites for web applications, demonstrating a diverse testing approach.
+Welcome to my Software Testing Portfolio! This is a work in progress as I continue to enhance and expand my test automation projects. Here, I showcase my expertise in automated testing using various frameworks like Cypress, Selenium, and Playwright, along with API testing using Jest. This project contains test suites for web applications, demonstrating a diverse and structured testing approach.
 
 ## 📂 Project Structure   
 
@@ -9,25 +9,18 @@ This project has the following structure:
 /Portfolio
 │── README.md  
 │── /cypress-tests/
-│   │── package.json
-│   │── cypress.config.js
-│   │── tests/
-│       ├── homepage.cy.js
-│── /selenium-tests/
-│   │── package.json
-│   │── wdio.conf.js
-│   │── tests/
-│       ├── homepage.test.js
-│── /playwright-tests/
-│   │── package.json
-│   │── playwright.config.js
-│   │── tests/
-│       ├── homepage.spec.js
-│── /api-tests/
-│   │── package.json
-│   │── jest.config.js
-│   │── tests/
-│       ├── api.test.js
+   │── .gitignore
+   │── package.json
+   │── docs
+   |   ├── Test_Cases.md
+   |   ├── Test_Plan.md
+   |   ├── US_AC.md
+   │── cypress.config.js
+   │── cypress/
+       ├── e2e
+       ├── fixtures
+       ├── support
+
 ```
 
 ### 🔹 Cypress Tests  
