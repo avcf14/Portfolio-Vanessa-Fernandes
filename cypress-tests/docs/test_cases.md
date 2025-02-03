@@ -266,22 +266,21 @@
 
 ## Test Case ID: TC013
 - **Test Case Name**: Validate Mobile Field (Invalid Length - Too Long)
-- **Description**: Test to ensure the Mobile field cannot be completed and the form submitted with a mobile number with an invalid length (11 digits).
+- **Description**: Test to ensure the Mobile field cannot accept more than 10 digits and the form prevents entering an 11th digit.
 - **Preconditions**: The user has navigated to the Practice Form page.
 - **Test setup**: Chrome browser version 132.0, OS: Windows 11.
 - **Test Steps**:
-  1. Enter a mobile number with invalid format in the Mobile field.
+  1. Enter a mobile number with 10 digits (valid format) in the Mobile field.
   2. Enter valid data in other required fields (first name, last name, gender, date of birth).
-  3. Click "Submit" button.
-  4. Verify that the input box is highlighted in red with an exclamation mark.
-  5. Verify that the form submission is prevented.
+  3. Try to type an 11th digit in the Mobile field.
+  4. Verify that the input field still contains only 10 digits after attempting to enter the 11th digit.
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
     - Gender - Male
-    - Mobile - 01234567890
+    - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
-- **Expected Result**: The Mobile field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
+- **Expected Result**: The Mobile field should not accept more than 10 digits, and the user should not be able to enter an 11th digit.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
