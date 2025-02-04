@@ -25,12 +25,12 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add(
-	"fillForm",
-	(firstName, lastName, mobileNumber, dateOfBirth) => {
-		cy.get("#firstName").type(firstName);
-		cy.get("#lastName").type(lastName);
-		cy.get("label[for='gender-radio-1']").click();
-		cy.get("#userNumber").type(mobileNumber);
-		cy.get("#dateOfBirthInput").type("{selectall}").type(dateOfBirth);
-	}
+  'fillForm',
+  (firstName, lastName, mobileNumber, dateOfBirth) => {
+    cy.get('#firstName').type(firstName);
+    cy.get('#lastName').type(lastName);
+    cy.get("label[for='gender-radio-1']").click();
+    cy.get('#userNumber').type(mobileNumber);
+    cy.get('#dateOfBirthInput').type('{selectall}').type(dateOfBirth);
+  }
 );
