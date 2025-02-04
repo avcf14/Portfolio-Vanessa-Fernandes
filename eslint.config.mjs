@@ -6,6 +6,9 @@ export default [
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   {
+    files: ["**/*.js", "**/*.ts"],
+  },
+  {
     rules: {
       complexity: ['error', 5],
       camelcase: ['error', { properties: 'always' }],
