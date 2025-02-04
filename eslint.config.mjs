@@ -17,9 +17,10 @@ export default [
     },
   },
   {
-    extends: ['plugin:cypress/recommended'],
-    env: {
-      'cypress/globals': true,
+    languageOptions: {
+      env: {
+        'cypress/globals': true,
+      },
     },
   },
 ];
