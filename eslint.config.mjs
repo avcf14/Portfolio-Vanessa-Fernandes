@@ -1,4 +1,3 @@
-
 import pluginJs from '@eslint/js';
 import pluginCypress from 'eslint-plugin-cypress/flat';
 
