@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Welcome to my Software Testing Portfolio! This is a work in progress as I continue to enhance and expand my test automation projects. Here, I showcase my expertise in automated testing using various frameworks like Cypress, Selenium, and Playwright, along with API testing using Jest. This project contains test suites for web applications, demonstrating a diverse and structured testing approach.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avcf14/Portfolio-Vanessa-Fernandes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avcf14/Portfolio-Vanessa-Fernandes/issues"
+  },
+  "homepage": "https://github.com/avcf14/Portfolio-Vanessa-Fernandes#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-cypress": "^4.1.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2"
+  }
+}
