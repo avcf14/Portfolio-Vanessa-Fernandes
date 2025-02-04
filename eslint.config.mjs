@@ -1,26 +1,29 @@
-import globals from 'globals';
+
 import pluginJs from '@eslint/js';
+import pluginCypress from 'eslint-plugin-cypress/flat';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
-  pluginJs.configs.recommended,
+  pluginCypress.configs.recommended,
   {
-    files: ["**/*.js", "**/*.ts"],
+    files: ['**/*.cy.js', '**/*.cy.ts'],
   },
   {
+    languageOptions: {
+      globals: {
+        require: 'readonly',
+        module: 'readonly',
+      },
+    },
+  },
+  pluginJs.configs.recommended,
+  {
+    files: ['**/*.js', '**/*.ts'],
     rules: {
       complexity: ['error', 5],
       camelcase: ['error', { properties: 'always' }],
       'no-unused-vars': ['warn', { vars: 'all', args: 'all' }],
       'no-console': ['warn'],
-    },
-  },
-  {
-    languageOptions: {
-      env: {
-        'cypress/globals': true,
-      },
     },
   },
 ];

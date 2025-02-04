@@ -131,8 +131,9 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
 
     cy.get('#userNumber')
       .should('have.attr', 'maxlength', '10')
-      .type('1')
       .should('have.value', '0123456789');
+
+    cy.get('#userNumber').type('1');
 
     cy.get('#userNumber').should('not.have.value', '12345678901');
   });

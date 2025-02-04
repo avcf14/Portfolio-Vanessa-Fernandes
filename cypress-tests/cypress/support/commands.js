@@ -31,6 +31,8 @@ Cypress.Commands.add(
     cy.get('#lastName').type(lastName);
     cy.get("label[for='gender-radio-1']").click();
     cy.get('#userNumber').type(mobileNumber);
-    cy.get('#dateOfBirthInput').type('{selectall}').type(dateOfBirth);
+    cy.get('#dateOfBirthInput').type('{selectall}');
+
+    cy.get('#dateOfBirthInput').type(dateOfBirth);
   }
 );
