@@ -8,7 +8,7 @@ This project has the following structure:
 ```
 /Portfolio
 │── .github/workflows
-|  │── main.yml  
+|  │── staticAnalysis.yml  
 │── /cypress-tests/
 |  │── cypress/
 |  |      ├── e2e
@@ -37,6 +37,7 @@ This project has the following structure:
 ```
 
 ### 🔹 Cypress Tests  
+
 📌 Located in: `/cypress-tests/`  
 - Framework: [Cypress](https://www.cypress.io/)  
 - Used for: End-to-End (E2E) UI testing  
@@ -47,6 +48,7 @@ This project has the following structure:
   ```
 
 ## 🚀 How to Run the Tests
+
 1. Clone this repository:
   ```sh
   git clone https://github.com/YOUR_GITHUB_USERNAME/portfolio.git
@@ -57,3 +59,11 @@ This project has the following structure:
 cd cypress-tests && npm install
 ```
 3. Run tests following the commands listed in each section above.
+
+## ⚙️ Continuous Integration (CI) with GitHub Actions
+
+This project is integrated with GitHub Actions for continuous integration (CI), ensuring that static code analysis (ESLint and Prettier) runs automatically on each push to the master branch.
+
+**GitHub Actions Workflow**: Every time code is pushed to the master branch, the code is automatically linted and formatted through GitHub Actions. This helps maintain code quality and ensures consistency throughout the project.
+
+**Test Results**: You can check the status of the GitHub Actions workflow by visiting the "Actions" tab in the repository.
