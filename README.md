@@ -18,9 +18,12 @@ This project has the following structure:
    │── cypress.config.js
    │── cypress/
        ├── e2e
+       |   ├── practiceForm.cy.js
        ├── fixtures
+       |   ├── formData.json
        ├── support
-
+           ├── commands.js
+           ├── e2e.js
 ```
 
 ### 🔹 Cypress Tests  
