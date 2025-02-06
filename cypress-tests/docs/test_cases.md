@@ -329,7 +329,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC014
+## Test Case ID: TC016
 - **Test Case Name**: Validate Date of Birth Field (Invalid Date in the Future)
 - **Description**: Test to ensure that a date of birth in the future cannot be selected for the Date of Birth field.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -351,7 +351,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC015
+## Test Case ID: TC017
 - **Test Case Name**: Validate Subjects Field with Auto-Complete (Valid Input)
 - **Description**: Test to ensure that the auto-complete functionality is working on the Subjects field and the form is submitted successfully without errors.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -378,7 +378,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC016
+## Test Case ID: TC018
 - **Test Case Name**: Validate Subjects Field with No Suggestion of Auto-Complete (Invalid Input)
 - **Description**: Test to ensure that, when the auto-complete functionality has no suggestion for a specific letter, the field is not populated.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -395,7 +395,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC017
+## Test Case ID: TC019
 - **Test Case Name**: Validate Full Deletion of Input in Subjects Field
 - **Description**: Test to ensure that, after adding a subject to the Subjects field, it is possible to delete it without errors.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -415,7 +415,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC018
+## Test Case ID: TC020
 - **Test Case Name**: Validate Hobbies Field with Single Selection
 - **Description**: Test to ensure the form submits successfully without errors when a single checkbox is selected from the Hobbies section.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -438,7 +438,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC019
+## Test Case ID: TC021
 - **Test Case Name**: Validate Hobbies Field with Multiple Selections
 - **Description**: Test to ensure the form submits successfully without errors when multiple checkboxs are selected from the Hobbies section.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -461,7 +461,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC020
+## Test Case ID: TC022
 - **Test Case Name**: Validate Image File Upload (Valid File)
 - **Description**: Test to ensure the form submits successfully without errors when a valid file in uploaded in the Picture section.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -487,7 +487,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC021
+## Test Case ID: TC023
 - **Test Case Name**: Validate Image File Upload (Non-Image File)
 - **Description**: Test to ensure the image can't be uploaded on the Picture section with an invalid file format and the form submission is prevented.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -511,7 +511,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC022
+## Test Case ID: TC024
 - **Test Case Name**: Validate Current Address Field (Valid Input)
 - **Description**: Test to ensure the form submits successfully without errors when a valid current address is entered.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -534,7 +534,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC023
+## Test Case ID: TC025
 - **Test Case Name**: Validate Current Address Field (Spaces Only)
 - **Description**: Test to ensure the Current Address field cannot be filled with only spaces.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -557,7 +557,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC024
+## Test Case ID: TC026
 - **Test Case Name**: Validate State and City Fields (Valid Input)
 - **Description**: Test to ensure the form submits successfully when valid state and city are selected.
 - **Preconditions**: The user has navigated to the Practice Form page.
@@ -581,7 +581,7 @@
 - **Pass/Fail**: To be filled after test execution.
 - **Priority**: Medium
 
-## Test Case ID: TC025
+## Test Case ID: TC027
 - **Test Case Name**: Validate City Field Reset After Changing State
 - **Description**: Test to ensure that when the user selects a different state, the city field is reset to the default or empty state (not retaining the previous city's value).
 - **Test setup**: Chrome browser version 132.0, OS: Windows 11.
