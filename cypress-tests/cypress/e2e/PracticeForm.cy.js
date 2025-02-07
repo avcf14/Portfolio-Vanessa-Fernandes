@@ -3,7 +3,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
     Cypress.on('uncaught:exception', () => false);
     cy.visit('https://demoqa.com/automation-practice-form');
   });
-  it.skip('TC001: Validate First Name on Form Submission (Valid Input)', () => {
+  it('TC001: Validate Form Submission (Valid Inputs only)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
     });
@@ -11,7 +11,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
 
     cy.contains('Thanks for submitting the form').should('be.visible');
   });
-  it.skip('TC002: Validate First Name on Form Submission (Long Valid Input)', () => {
+  it('TC002: Validate First Name on Form Submission (Long Valid Input)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm('a'.repeat(50), data.lastName, data.mobile, data.dateOfBirth);
     });
@@ -19,7 +19,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
 
     cy.contains('Thanks for submitting the form').should('be.visible');
   });
-  it.skip('TC003: Validate First Name Field (Empty Input)', () => {
+  it('TC003: Validate First Name Field (Empty Input)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
     });
@@ -30,7 +30,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
-  it.skip('TC004: Validate First Name Field (Spaces Only)', () => {
+  it('TC004: Validate First Name Field (Spaces Only)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm('   ', data.lastName, data.mobile, data.dateOfBirth);
     });
@@ -40,15 +40,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
-  it.skip('TC005: Validate Last Name on Form Submission (Valid Input)', () => {
-    cy.fixture('formData').then((data) => {
-      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
-    });
-    cy.get('#submit').click();
-
-    cy.contains('Thanks for submitting the form').should('be.visible');
-  });
-  it.skip('TC006: Validate Last Name on Form Submission (Long Valid Input)', () => {
+  it('TC005: Validate Last Name on Form Submission (Long Valid Input)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(
         data.firstName,
@@ -61,7 +53,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
 
     cy.contains('Thanks for submitting the form').should('be.visible');
   });
-  it.skip('TC007: Validate Last Name Field (Empty Input)', () => {
+  it('TC006: Validate Last Name Field (Empty Input)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
     });
@@ -72,7 +64,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
-  it.skip('TC008: Validate Last Name Field (Spaces Only)', () => {
+  it('TC007: Validate Last Name Field (Spaces Only)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, '   ', data.mobile, data.dateOfBirth);
     });
@@ -82,7 +74,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
-  it.skip('TC009: Validate Email Field (Valid Format)', () => {
+  it('TC008: Validate Email Field (Valid Format)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
       cy.get('#userEmail').type(data.userEmail);
@@ -92,7 +84,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
 
     cy.contains('Thanks for submitting the form').should('be.visible');
   });
-  it.skip('TC010: Validate Email Field (Invalid Format)', () => {
+  it('TC009: Validate Email Field (Invalid Format)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
       cy.get('#userEmail').type('example.mail');
@@ -104,16 +96,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
-  it.skip('TC011: Validate Mobile Field (Valid Format)', () => {
-    cy.fixture('formData').then((data) => {
-      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
-    });
-
-    cy.get('#submit').click();
-
-    cy.contains('Thanks for submitting the form').should('be.visible');
-  });
-  it.skip('TC012: Validate Mobile Field (Invalid Length - Too Short)', () => {
+  it('TC010: Validate Mobile Field (Invalid Length - Too Short)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, data.lastName, '1', data.dateOfBirth);
     });
@@ -124,7 +107,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
-  it.skip('TC013: Validate Mobile Field (Invalid Length - Too Long)', () => {
+  it('TC011: Validate Mobile Field (Invalid Length - Too Long)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
     });
@@ -137,7 +120,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
 
     cy.get('#userNumber').should('not.have.value', '12345678901');
   });
-  it.skip('TC014: Validate Mobile Field (Invalid Input)', () => {
+  it('TC012: Validate Mobile Field (Invalid Input)', () => {
     cy.fixture('formData').then((data) => {
       cy.fillForm(
         data.firstName,
@@ -153,15 +136,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
-  it.skip('TC015: Validate Date of Birth Field (Valid Format)', () => {
-    cy.fixture('formData').then((data) => {
-      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
-    });
-    cy.get('#submit').click();
-
-    cy.contains('Thanks for submitting the form').should('be.visible');
-  });
-  it('TC016: Validate Date of Birth Field (Invalid Date in the Future)', () => {
+  it('TC013: Validate Date of Birth Field (Invalid Date in the Future)', () => {
     const futureDate = new Date();
     futureDate.setMonth(futureDate.getMonth() + 3);
     const futureDateString = futureDate.toISOString().split('T')[0];
