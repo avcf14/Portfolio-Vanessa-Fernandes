@@ -39,7 +39,7 @@
 - **Expected Result**: The First Name field should accept the input without errors, form should be submitted successfully.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: High
+- **Priority**: Low
 
 ## Test Case ID: TC003
 - **Test Case Name**: Validate First Name Field (Empty Input)
@@ -61,7 +61,7 @@
 - **Expected Result**: The First Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is empty and form submission should be prevented.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: High
+- **Priority**: Medium
 
 ## Test Case ID: TC004
 - **Test Case Name**: Validate First Name Field (Spaces Only)
@@ -83,7 +83,7 @@
 - **Expected Result**: The First Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: High
+- **Priority**: Medium
 
 ## Test Case ID: TC005
 - **Test Case Name**: Validate Last Name on Form Submission (Long Valid Input)
@@ -105,7 +105,7 @@
 - **Expected Result**: The Last Name field should accept the input without errors, form should be submitted successfully.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: High
+- **Priority**: Low
 
 ## Test Case ID: TC006
 - **Test Case Name**: Validate Last Name Field (Empty Input)
@@ -127,7 +127,7 @@
 - **Expected Result**: The Last Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is empty and form submission should be prevented.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: High
+- **Priority**: Medium
 
 ## Test Case ID: TC007
 - **Test Case Name**: Validate Last Name Field (Spaces Only)
@@ -149,7 +149,7 @@
 - **Expected Result**: The Last Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: High
+- **Priority**: Medium
 
 ## Test Case ID: TC008
 - **Test Case Name**: Validate Email Field (Valid Format)
@@ -172,7 +172,7 @@
 - **Expected Result**: The Email field should accept the input without errors, form should be submitted successfully.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC009
 - **Test Case Name**: Validate Email Field (Invalid Format)
@@ -195,7 +195,7 @@
 - **Expected Result**: The Email field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC010
 - **Test Case Name**: Validate Mobile Field (Invalid Length - Too Short)
@@ -309,7 +309,7 @@
 - **Expected Result**: The "Maths" suggestion should appear when typing "M", selecting the "Maths" suggestion should populate the field with "Maths" and the form submission should be successful.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC015
 - **Test Case Name**: Validate Subjects Field with No Suggestion of Auto-Complete (Invalid Input)
@@ -326,7 +326,7 @@
 - **Expected Result**: No suggestions should appear for the invalid input, the input field should not accept that same input.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC016
 - **Test Case Name**: Validate Full Deletion of Input in Subjects Field
@@ -346,7 +346,7 @@
 - **Expected Result**: The input field should be completely cleared when the backspace key is pressed enough times.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC017
 - **Test Case Name**: Validate Hobbies Field with Single Selection
@@ -369,7 +369,7 @@
 - **Expected Result**: "Sports" should be correctly selected and the form should be submitted without errors.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC018
 - **Test Case Name**: Validate Hobbies Field with Multiple Selections
@@ -392,7 +392,7 @@
 - **Expected Result**: "Sports" and "Music" should be correctly selected and the form should be submitted without errors.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC019
 - **Test Case Name**: Validate Image File Upload (Valid File)
@@ -418,7 +418,7 @@
 - **Expected Result**: The image selected should be uploaded sucessfully and the form should be submitted without errors.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC020
 - **Test Case Name**: Validate Image File Upload (Non-Image File)
@@ -442,7 +442,7 @@
 - **Expected Result**: The image selected should be rejected by the system and the submission of the form should be prevented.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC021
 - **Test Case Name**: Validate Current Address Field (Valid Input)
@@ -465,7 +465,7 @@
 - **Expected Result**: The Current Address field should accept the input without errors and the form should be submitted successfully.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC022
 - **Test Case Name**: Validate Current Address Field (Spaces Only)
@@ -488,7 +488,7 @@
 - **Expected Result**: The Current Address field should be highlighted in red with an exclamation mark, and the form submission should be prevented.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC023
 - **Test Case Name**: Validate State and City Fields (Valid Input)
@@ -512,7 +512,7 @@
 - **Expected Result**: The form should be submitted successfully without any validation errors.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
 
 ## Test Case ID: TC024
 - **Test Case Name**: Validate City Field Reset After Changing State
@@ -533,4 +533,4 @@
 - **Expected Result**: When the user changes the state, the city field should be reset and should not retain the previous city's selection ("Noida" in this case). The city dropdown should either be empty or reset to its default value.
 - **Actual Result**: To be filled after test execution.
 - **Pass/Fail**: To be filled after test execution.
-- **Priority**: Medium
+- **Priority**: Low
