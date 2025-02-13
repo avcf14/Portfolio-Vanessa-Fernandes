@@ -34,5 +34,6 @@ Cypress.Commands.add(
     cy.get('#dateOfBirthInput').type('{selectall}');
 
     cy.get('#dateOfBirthInput').type(dateOfBirth);
+    cy.get('#dateOfBirthInput').type('{enter}');
   }
 );

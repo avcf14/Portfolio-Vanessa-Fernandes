@@ -150,4 +150,39 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       expect($input[0].checkValidity()).to.be.false;
     });
   });
+  it('TC014: Validate Subjects Field with Auto-Complete (Valid Input)', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#subjectsContainer').type('M');
+
+    cy.get('.subjects-auto-complete__menu').contains('Math').click();
+    cy.get('#submit').click();
+
+    cy.contains('Thanks for submitting the form').should('be.visible');
+  });
+  it('TC015: Validate Subjects Field with No Suggestion of Auto-Complete (Invalid Input)', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#subjectsContainer').type('Z');
+
+    cy.get('.subjects-auto-complete__menu').should('not.exist');
+
+    cy.get('#subjectsContainer').click();
+
+    cy.get('#subjectsContainer').should('have.value', '')
+  });
+  it('TC016: Validate Full Deletion of Input in Subjects Field', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#subjectsContainer').type('M');
+
+    cy.get('.subjects-auto-complete__menu').contains('Math').click();
+    cy.get('#subjectsContainer').contains('Maths');
+    cy.get('.css-xb97g8').click();
+
+    cy.get('#subjectsContainer').should('have.value', '');
+  });
 });
