@@ -171,7 +171,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
 
     cy.get('#subjectsContainer').click();
 
-    cy.get('#subjectsContainer').should('have.value', '')
+    cy.get('#subjectsContainer').should('have.value', '');
   });
   it('TC016: Validate Full Deletion of Input in Subjects Field', () => {
     cy.fixture('formData').then((data) => {
