@@ -1,3 +1,5 @@
+import 'cypress-file-upload';
+
 describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
   beforeEach(() => {
     Cypress.on('uncaught:exception', () => false);
@@ -8,8 +10,13 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
       cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
     });
     cy.get('#submit').click();
-
-    cy.contains('Thanks for submitting the form').should('be.visible');
+    const data = ['John', 'Doe', 'Male', '0123456789', '30 January,1990'];
+    cy.get('.modal-content').within(() => {
+      cy.contains('Thanks for submitting the form').should('be.visible');
+      data.forEach((text) => {
+        cy.contains(text).should('be.visible');
+      });
+    });
   });
   it('TC002: Validate First Name on Form Submission (Long Valid Input)', () => {
     cy.fixture('formData').then((data) => {
@@ -18,6 +25,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
     cy.get('#submit').click();
 
     cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('a'.repeat(50)).should('be.visible');
   });
   it('TC003: Validate First Name Field (Empty Input)', () => {
     cy.fixture('formData').then((data) => {
@@ -52,6 +60,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
     cy.get('#submit').click();
 
     cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('a'.repeat(50)).should('be.visible');
   });
   it('TC006: Validate Last Name Field (Empty Input)', () => {
     cy.fixture('formData').then((data) => {
@@ -83,6 +92,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
     cy.get('#submit').click();
 
     cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('example@mail.com').should('be.visible');
   });
   it('TC009: Validate Email Field (Invalid Format)', () => {
     cy.fixture('formData').then((data) => {
@@ -160,6 +170,7 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
     cy.get('#submit').click();
 
     cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('Maths').should('be.visible');
   });
   it('TC015: Validate Subjects Field with No Suggestion of Auto-Complete (Invalid Input)', () => {
     cy.fixture('formData').then((data) => {
@@ -184,5 +195,111 @@ describe('Testing Practice Form found on demoqa.com using Cypress ', () => {
     cy.get('.css-xb97g8').click();
 
     cy.get('#subjectsContainer').should('have.value', '');
+  });
+  it('TC017: Validate Hobbies Field with Single Selection', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#hobbies-checkbox-1').check({ force: true });
+
+    cy.get('#submit').click();
+
+    cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('Sports').should('be.visible');
+  });
+  it('TC018: Validate Hobbies Field with Multiple Selections', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#hobbies-checkbox-1').check({ force: true });
+    cy.get('#hobbies-checkbox-3').check({ force: true });
+
+    cy.get('#submit').click();
+
+    cy.contains('Thanks for submitting the form').should('be.visible');
+    const hobbies = ['Sports', 'Music'];
+    hobbies.forEach((hobby) => {
+      cy.contains(hobby).should('be.visible');
+    });
+  });
+  it('TC019: Validate Image File Upload (Valid File)', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#uploadPicture').attachFile('myfile.jpg');
+
+    cy.get('#submit').click();
+
+    cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('myfile.jpg').should('be.visible');
+  });
+  it('TC020: Validate Image File Upload (Non-Image File)', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#uploadPicture').attachFile('myfile.pdf');
+
+    cy.get('#submit').click();
+
+    cy.get('#uploadPicture').then(($input) => {
+      expect($input[0].checkValidity()).to.be.false;
+    });
+  });
+  it('TC021: Validate Current Address Field (Valid Input)', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#currentAddress').type('123 Main Street, Springfield');
+
+    cy.get('#submit').click();
+
+    cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('123 Main Street, Springfield').should('be.visible');
+  });
+  it('TC022: Validate Current Address Field (Spaces Only)', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+    cy.get('#currentAddress').type('   ');
+
+    cy.get('#submit').click();
+
+    cy.get('#currentAddress').then(($input) => {
+      expect($input[0].checkValidity()).to.be.false;
+    });
+  });
+  it('TC023: Validate State and City Fields (Valid Input)', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+
+    cy.get('#state').click();
+    cy.get('.css-26l3qy-menu').should('exist').contains('NCR').click();
+
+    cy.get('#city').click();
+    cy.get('.css-26l3qy-menu').should('exist').contains('Noida').click();
+
+    cy.get('#submit').click();
+    cy.contains('Thanks for submitting the form').should('be.visible');
+    cy.contains('NCR Noida').should('be.visible');
+  });
+  it('TC024: Validate City Field Reset After Changing State', () => {
+    cy.fixture('formData').then((data) => {
+      cy.fillForm(data.firstName, data.lastName, data.mobile, data.dateOfBirth);
+    });
+
+    cy.get('#state').click();
+    cy.get('.css-26l3qy-menu').should('exist').contains('NCR').click();
+
+    cy.get('#city').click();
+    cy.get('.css-26l3qy-menu').should('exist').contains('Noida').click();
+
+    cy.get('#state').click();
+    cy.get('.css-26l3qy-menu')
+      .should('exist')
+      .contains('Uttar Pradesh')
+      .click();
+
+    cy.get('#city').should('not.contain', 'Noida');
   });
 });
