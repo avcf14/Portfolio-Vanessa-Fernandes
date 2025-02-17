@@ -17,6 +17,7 @@
   "homepage": "https://github.com/avcf14/Portfolio-Vanessa-Fernandes#readme",
   "devDependencies": {
     "@eslint/js": "^9.19.0",
+    "cypress-file-upload": "^5.0.8",
     "eslint": "^9.19.0",
     "eslint-plugin-cypress": "^4.1.0",
     "globals": "^15.14.0",
