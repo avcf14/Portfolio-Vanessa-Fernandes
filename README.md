@@ -14,6 +14,8 @@ This project has the following structure:
 |  |      ├── e2e
 |  |      |   ├── practiceForm.cy.js
 |  |      ├── fixtures
+|  |      ├── myfile.jpg
+|  |      ├── myfile.pdf
 |  |      |   ├── formData.json
 |  |      ├── support
 |  |          ├── commands.js
