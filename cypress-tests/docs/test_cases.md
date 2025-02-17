@@ -7,16 +7,16 @@
   2. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   3. Click "Submit" button.
   4. Verify that no validation errors appear after submitting the form.
-  5. Verify that the form submission is successful.
+  5. Verify that the form submission is successful with the data that was provided.
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
     - Gender - Male
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
-- **Expected Result**: All the required fields should accept the inputs without errors, form should be submitted successfully.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Expected Result**: The form should accept all valid inputs without errors. After clicking "Submit," the form should be successfully submitted, and a confirmation message should appear, showing the correct data entered. No errors should appear, and the form should not reset unexpectedly.
+- **Actual Result**: The form was submitted successfully without any validation errors. The entered data (First Name: John, Last Name: Doe, Gender: Male, Mobile: 0123456789, Date of Birth: 30/01/1990) was displayed correctly in the confirmation message, confirming that the form was processed as expected.
+- **Pass/Fail**: Pass
 - **Priority**: High
 
 ## Test Case ID: TC002
@@ -29,16 +29,16 @@
   2. Enter valid data in other required fields (last name, gender, mobile, date of birth).
   3. Click "Submit" button
   4. Verify that no validation errors appear after submitting the form.
-  5. Verify that the form submission is successful.
+  5. Verify that the form submission is successful with the first name that was provided.
 - **Test Data**: 
     - First Name - 50 characters
     - Last Name - "Doe"
     - Gender - Male
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
-- **Expected Result**: The First Name field should accept the input without errors, form should be submitted successfully.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Expected Result**: The form should accept all valid inputs without errors. After clicking "Submit," the form should be successfully submitted, and a confirmation message should appear, showing the correct data entered. No errors should appear, and the form should not reset unexpectedly.
+- **Actual Result**: The form was submitted successfully without any validation errors. The entered data (First Name: 50 "a" characters, Last Name: Doe, Gender: Male, Mobile: 0123456789, Date of Birth: 30/01/1990) was displayed correctly in the confirmation message, confirming that the form was processed as expected.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC003
@@ -59,8 +59,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The First Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is empty and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The First Name field was cleared, and when the form was submitted, the validity check failed. The form submission was prevented, confirming that the First Name field is required.
+- **Pass/Fail**: Pass
 - **Priority**: Medium
 
 ## Test Case ID: TC004
@@ -81,8 +81,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The First Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The First Name field was filled with spaces, but the form was still submitted successfully. The field did not trigger any validation error, and the form submission was allowed despite the First Name being only spaces.
+- **Pass/Fail**: Fail
 - **Priority**: Medium
 
 ## Test Case ID: TC005
@@ -95,7 +95,7 @@
   2. Enter valid data in other required fields (first name, gender, mobile, date of birth).
   3. Click "Submit" button.
   4. Verify that no validation errors appear after submitting the form.
-  5. Verify that the form submission is successful.
+  5. Verify that the form submission is successful with the last name that was provided..
 - **Test Data**: 
     - First Name - "John"
     - Last Name - 50 characters
@@ -103,8 +103,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Last Name field should accept the input without errors, form should be submitted successfully.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The form was submitted successfully without any validation errors. The entered data (First Name: John, Last Name: 50 "a" characters, Gender: Male, Mobile: 0123456789, Date of Birth: 30/01/1990) was displayed correctly in the confirmation message, confirming that the form was processed as expected.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC006
@@ -125,8 +125,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Last Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is empty and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Last Name field was cleared, and when the form was submitted, the validity check failed. The form submission was prevented, confirming that the Last Name field is required.
+- **Pass/Fail**: Pass
 - **Priority**: Medium
 
 ## Test Case ID: TC007
@@ -147,8 +147,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Last Name field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Last Name field was filled with spaces, but the form was still submitted successfully. The field did not trigger any validation error, and the form submission was allowed despite the Last Name being only spaces.
+- **Pass/Fail**: Fail
 - **Priority**: Medium
 
 ## Test Case ID: TC008
@@ -161,7 +161,7 @@
   2. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   3. Click "Submit" button.
   4. Verify that no validation errors appear after submitting the form.
-  5. Verify that the form submission is successful.
+  5. Verify that the form submission is successful with the email that was provided.
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
@@ -170,8 +170,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Email field should accept the input without errors, form should be submitted successfully.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Email field accepted the valid email "example@mail.com" without any errors. The form was successfully submitted, and the entered email was correctly reflected in the confirmation message, confirming that the form was processed as expected.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC009
@@ -193,8 +193,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Email field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Email field did not accept the invalid email "example.mail" and was highlighted in red with an exclamation mark. The form submission was prevented, and no confirmation message appeared, as expected when an invalid email format is entered.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC010
@@ -215,8 +215,8 @@
     - Mobile - 012345678
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Mobile field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Mobile field was filled with an invalid mobile number (9 digits), but the form was still submitted successfully. The field did not trigger any validation error, and the form was submitted despite the mobile number being too short.
+- **Pass/Fail**: Fail
 - **Priority**: Medium
 
 ## Test Case ID: TC011
@@ -236,8 +236,8 @@
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Mobile field should not accept more than 10 digits, and the user should not be able to enter an 11th digit.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Mobile field accepted the 10-digit mobile number "0123456789" without issue. When attempting to enter an 11th digit, the field prevented the input, ensuring that only 10 digits were allowed. The field remained limited to 10 digits as expected.
+- **Pass/Fail**: Pass
 - **Priority**: Medium
 
 ## Test Case ID: TC012
@@ -258,8 +258,8 @@
     - Mobile - "johndoedoe"
     - Date Of Birth - 30/01/1990
 - **Expected Result**: The Mobile field should be highlighted in red with an exclamation mark to bring attention to the fact that it is only filled with spaces and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Mobile field accepted the invalid alphabetic input "johndoedoe". When the form was submitted, the validity check failed, and the form submission was prevented as expected.
+- **Pass/Fail**: Pass
 - **Priority**: Medium
 
 ## Test Case ID: TC013
@@ -280,8 +280,8 @@
     - Mobile - 0123456789
     - Date Of Birth - (date in the future)
 - **Expected Result**: The Date of Birth field should not allow the date in the future to be selected and form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Date of Birth field accepted a date in the future and allowed the form to be submitted successfully, despite the invalid input. The form was not prevented from submission, which was not the expected behavior.
+- **Pass/Fail**: Fail
 - **Priority**: Medium
 
 ## Test Case ID: TC014
@@ -298,7 +298,7 @@
   6. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   7. Click "Submit" button.
   8. Verify that no validation errors appear after submitting the form.
-  9. Verify that the form submission is successful.
+  9. Verify that the form submission is successful with the subject that was provided.
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
@@ -307,8 +307,8 @@
     - Date Of Birth - 30/01/1990
     - Subjects - "Maths"
 - **Expected Result**: The "Maths" suggestion should appear when typing "M", selecting the "Maths" suggestion should populate the field with "Maths" and the form submission should be successful.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The "Maths" suggestion appeared after typing "M" and was successfully selected. The form was submitted successfully with "Maths" as the subject.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC015
@@ -324,8 +324,8 @@
 - **Test Data**: 
     - Subjects - "Z"
 - **Expected Result**: No suggestions should appear for the invalid input, the input field should not accept that same input.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: No suggestions appeared when typing "Z". The input field did not accept "Z" as valid input.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC016
@@ -344,8 +344,8 @@
 - **Test Data**: 
     - Subjects - "Maths"
 - **Expected Result**: The input field should be completely cleared when the backspace key is pressed enough times.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: When pressing the backspace key to delete the input, the page unexpectedly turns blank, making it impossible to confirm if the input was fully cleared from the Subjects field.
+- **Pass/Fail**: Fail
 - **Priority**: Low
 
 ## Test Case ID: TC017
@@ -358,7 +358,7 @@
   2. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   3. Click "Submit" button.
   4. Verify that no validation errors appear after submitting the form.
-  5. Verify that the form submission is successful. 
+  5. Verify that the form submission is successful with the hobbies that were provided. 
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
@@ -367,8 +367,8 @@
     - Date Of Birth - 30/01/1990
     - Hobbies - select "Sports" checkbox
 - **Expected Result**: "Sports" should be correctly selected and the form should be submitted without errors.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The "Sports" checkbox was successfully selected, the form was submitted successfully with "Sports" as a hobbie.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC018
@@ -381,7 +381,7 @@
   2. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   3. Click "Submit" button.
   4. Verify that no validation errors appear after submitting the form.
-  5. Verify that the form submission is successful. 
+  5. Verify that the form submission is successful with the hobbies that were provided. 
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
@@ -390,8 +390,8 @@
     - Date Of Birth - 30/01/1990
     - Hobbies - select "Sports" and "Music" checkboxs
 - **Expected Result**: "Sports" and "Music" should be correctly selected and the form should be submitted without errors.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: Both the "Sports" and "Music" checkboxes were selected successfully, the form was submitted successfully with "Sports" and "Music" as hobbies.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC019
@@ -407,7 +407,7 @@
   5. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   6. Click "Submit" button.
   7. Verify that no validation errors appear after submitting the form.
-  8. Verify that the form submission is successful. 
+  8. Verify that the form submission is successful with the file name that was provided. 
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
@@ -416,8 +416,8 @@
     - Date Of Birth - 30/01/1990
     - Picture - upload .jpg file.
 - **Expected Result**: The image selected should be uploaded sucessfully and the form should be submitted without errors.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: After submitting the form, the uploaded image file name appeared correctly in the confirmation modal, indicating the file was successfully uploaded.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC020
@@ -438,10 +438,10 @@
     - Gender - Male
     - Mobile - 0123456789
     - Date Of Birth - 30/01/1990
-    - Picture - upload .txt file.
+    - Picture - upload .pdf file.
 - **Expected Result**: The image selected should be rejected by the system and the submission of the form should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The non-image file (.pdf) was accepted by the system, and no validation error was triggered, allowing the form to be submitted despite the invalid file type.
+- **Pass/Fail**: Fail
 - **Priority**: Low
 
 ## Test Case ID: TC021
@@ -454,7 +454,7 @@
   2. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   3. Click the "Submit" button.
   4. Verify that no validation errors appear after submitting the form.
-  5. Verify that the form submission is successful. 
+  5. Verify that the form submission is successful with the address that was provided. 
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
@@ -463,8 +463,8 @@
     - Date Of Birth - 30/01/1990
     - Current Address - "123 Main Street, Springfield"
 - **Expected Result**: The Current Address field should accept the input without errors and the form should be submitted successfully.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Current Address field accepted the input "123 Main Street, Springfield" without errors, and the form was submitted successfully. The address was correctly displayed in the confirmation modal after submission.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC022
@@ -486,8 +486,8 @@
     - Date Of Birth - 30/01/1990
     - Current Address - "   "
 - **Expected Result**: The Current Address field should be highlighted in red with an exclamation mark, and the form submission should be prevented.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The Current Address field allowed the input of spaces only, and the form was submitted successfully despite the invalid input. The field did not highlight in red with an exclamation mark as expected.
+- **Pass/Fail**: Fail
 - **Priority**: Low
 
 ## Test Case ID: TC023
@@ -501,7 +501,7 @@
   3. Enter valid data in all required fields (first name, last name, gender, mobile, date of birth).
   4. Click the "Submit" button.
   5. Verify that no validation errors appear after submitting the form.
-  6. Verify that the form submission is successful.
+  6. Verify that the form submission is successful with the state and city that were provided.
 - **Test Data**: 
     - First Name - "John"
     - Last Name - "Doe"
@@ -510,8 +510,8 @@
     - Date Of Birth - 30/01/1990
     - State - "NCR"; City - "Noida"
 - **Expected Result**: The form should be submitted successfully without any validation errors.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: The form was successfully submitted with the valid state "NCR" and city "Noida" selected. After submission, the modal confirmation appeared showing the correct state and city, with no validation errors.
+- **Pass/Fail**: Pass
 - **Priority**: Low
 
 ## Test Case ID: TC024
@@ -531,6 +531,6 @@
     - Date Of Birth - 30/01/1990
     - State - "NCR"; City - "Noida"
 - **Expected Result**: When the user changes the state, the city field should be reset and should not retain the previous city's selection ("Noida" in this case). The city dropdown should either be empty or reset to its default value.
-- **Actual Result**: To be filled after test execution.
-- **Pass/Fail**: To be filled after test execution.
+- **Actual Result**: When the state was changed from "NCR" to "Uttar Pradesh", the city field did not reset. The previously selected city "Noida" remained in the city dropdown instead of being cleared or reset to the default value.
+- **Pass/Fail**: Fail
 - **Priority**: Low
